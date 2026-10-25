@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nigeria History Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #656363;
+            color: #17365d;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #003399;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 8px;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #003399;
+        }
+
+        nav a {
+            color: #003399;
+            text-decoration: none;
+            margin: 8px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .hero {
+            background: #eaf2ff;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: #003399;
+            font-size: 28px;
+        }
+
+        .hero p {
+            margin: 15px auto;
+            max-width: 650px;
+        }
+
+        .search-box {
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 12px;
+            width: 70%;
+            max-width: 400px;
+            border: 1px solid #003399;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 12px 18px;
+            background: #003399;
+            color: hwb(0 100% 0%);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 15px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 25px 0;
+            color: #003399;
+        }
+
+        .history-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: hwb(0 100% 0%);
+            border: 1px solid #f9c9fb;
+            border-radius: 10px;
+            padding: 22px;
+            box-shadow: 0 3px 10px #e0adf5;
+        }
+
+        .card h3 {
+            color: #003399;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #003399;
+            font-weight: bold;
+        }
+
+        .timeline {
+            background: #ffeafc;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 35px;
+        }
+
+        footer {
+            background: #003399;
+            color: hwb(298 36% 7%);
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 35px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇳🇬 NIGERIA HISTORY HUB</h1>
+    <p>Discover Nigeria's Past, Understand Its Present</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#history">History</a>
+    <a href="#leaders">Leaders</a>
+    <a href="#states">States</a>
+    <a href="#culture">Culture</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Welcome to Nigeria History Hub</h2>
+
+    <p>
+        Explore the history of Nigeria, from ancient kingdoms
+        and traditional societies to independence and modern times.
+        Learn about our people, cultures, leaders and historic events.
+    </p>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Nigerian history..."
+            aria-label="Search Nigerian history"
+        >
+
+        <button onclick="searchHistory()">Search</button>
+    </div>
+</section>
+
+<main id="history">
+
+    <h2 class="section-title">Explore Nigerian History</h2>
+
+    <div class="history-grid" id="historyGrid">
+
+        <article class="card">
+            <h3>Ancient Nigeria</h3>
+            <p>
+                Discover early societies, the Nok culture,
+                and the development of communities and kingdoms
+                across the region that became Nigeria.
+            </p>
+            <a href="#timeline">Explore history</a>
+        </article>
+
+        <article class="card">
+            <h3>Colonial Nigeria</h3>
+            <p>
+                Learn about British colonial rule, the amalgamation
+                of Northern and Southern Nigeria in 1914,
+                and the growth of nationalist movements.
+            </p>
+            <a href="#timeline">Explore history</a>
+        </article>
+
+        <article class="card">
+            <h3>Independence</h3>
+            <p>
+                Nigeria gained independence from Britain
+                on 1 October 1960. Discover the people
+                and events behind this historic achievement.
+            </p>
+            <a href="#timeline">Explore history</a>
+        </article>
+
+        <article class="card" id="leaders">
+            <h3>Nigerian Leaders</h3>
+            <p>
+                Explore the presidents and heads of state
+                who have led Nigeria since independence,
+                including important events during their rule.
+            </p>
+            <a href="#timeline">Explore history</a>
+        </article>
+
+        <article class="card" id="states">
+            <h3>36 States and the FCT</h3>
+            <p>
+                Learn about Nigeria's states and Federal Capital
+                Territory, including their creation, capitals,
+                geography and historical development.
+            </p>
+            <a href="#timeline">Explore history</a>
+        </article>
+
+        <article class="card" id="culture">
+            <h3>Culture and Traditions</h3>
+            <p>
+                Discover Nigeria's diverse peoples, languages,
+                traditional institutions, festivals, art,
+                music and cultural heritage.
+            </p>
+            <a href="#timeline">Explore history</a>
+        </article>
+
+        <article class="card">
+            <h3>Nigerian Civil War</h3>
+            <p>
+                Study the causes, events and consequences
+                of the Nigerian Civil War, fought from 1967
+                to 1970, using reliable historical sources.
+            </p>
+            <a href="#timeline">Explore history</a>
+        </article>
+
+        <article class="card">
+            <h3>Historic Personalities</h3>
+            <p>
+                Learn about influential Nigerian leaders,
+                activists, writers, inventors and other
+                figures who helped shape the country's history.
+            </p>
+            <a href="#timeline">Explore history</a>
+        </article>
+
+    </div>
+
+    <p class="no-results" id="noResults">
+        No matching topic found. Try another search.
+    </p>
+
+    <section class="timeline" id="timeline">
+        <h2>Important Dates in Nigerian History</h2>
+
+        <p><strong>1914:</strong> Amalgamation of Northern
+        and Southern Nigeria under British administration.</p>
+
+        <p><strong>1 October 1960:</strong> Nigeria gains
+        independence from Britain.</p>
+
+        <p><strong>1 October 1963:</strong> Nigeria becomes
+        a republic.</p>
+
+        <p><strong>1967–1970:</strong> Nigerian Civil War.</p>
+
+        <p><strong>29 May 1999:</strong> Nigeria begins its
+        current Fourth Republic.</p>
+    </section>
+
+</main>
+
+<footer>
+    <h3>NIGERIA HISTORY HUB 🇳🇬</h3>
+    <p>Preserving Our History for Future Generations.</p>
+    <p>&copy; 2026 Nigeria History Hub</p>
+</footer>
+
+<script>
+    function searchHistory() {
+        const input = document
+            .getElementById("searchInput")
+            .value.toLowerCase()
+            .trim();
+
+        const cards = document.querySelectorAll(".card");
+        let found = 0;
+
+        cards.forEach(card => {
+            const matches = card.textContent
+                .toLowerCase()
+                .includes(input);
+
+            card.style.display = matches ? "block" : "none";
+
+            if (matches) found++;
+        });
+
+        document.getElementById("noResults").style.display =
+            found === 0 ? "block" : "none";
+    }
+
+    document.getElementById("searchInput")
+        .addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                searchHistory();
+            }
+        });
+</script>
+
+</body>
+</html>
